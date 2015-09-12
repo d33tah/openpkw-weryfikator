@@ -1,11 +1,11 @@
 
 # OpenPKW JAVA
 
-W obecnej chwili podstawowym celem zespołu developerów JAVA jest  zbudowanie niezależnej i obiektywnej formy weryfikacji wyników wyborów za pomocą tworzonego backend. System ten przeznaczony będzie dla ok 27800 ochotników będących mężami zaufania w obwodowych komisjach wyborczych. Użytkownicy Ci, mają za zadanie za pomocą aplikacji mobilnych przesłać dane z protokołow wyborczych wraz ze zdjeciami tychże protokołów, które udostępnione są publicznie w komisjach obwodowych na koniec dnia wyborczego do zbiorczego systemu agregacji danych (backend). System ten prócz zbierania danych ma zadanie wizualizować pozyskane informacje w postaci diagramów wyborczych z podziałem na województwa. 
+W obecnej chwili podstawowym celem zespołu developerów JAVA jest  zbudowanie niezależnej i obiektywnej formy weryfikacji wyników wyborów za pomocą tworzonego backend. System ten przeznaczony będzie dla ok 27800 ochotników będących mężami zaufania w obwodowych komisjach wyborczych. Użytkownicy ci mają za zadanie za pomocą aplikacji mobilnych przesłać dane z protokołow wyborczych wraz ze zdjęciami tychże protokołów, które udostępnione są publicznie w komisjach obwodowych na koniec dnia wyborczego do zbiorczego systemu agregacji danych (backend). System ten prócz zbierania danych ma zadanie wizualizować pozyskane informacje w postaci diagramów wyborczych z podziałem na województwa. 
  
  
 
-# Członkowie w porzadku alfabetycznym 
+# Członkowie w porządku alfabetycznym 
 
 | Członek  | Rola  |
 | ------------- | ------------- |
@@ -41,12 +41,12 @@ GitHub: https://github.com/openpkw/openpkw/tree/master/java
 # Oranizacja pracy i linki
 
 - Do modelowania wykorzystujemy Draw.io
-- Do zmian w dokumentacji wykorzystujemy  Dillinger.io oraz GitHub
+- Do zmian w dokumentacji wykorzystujemy Dillinger.io oraz GitHub
 - Do zadań wykorzystujemy Trello
 - Wszyscy developerzy mają pełny dostęp do repozytorium
 - Każdy feature implementowany jest na branchu. Przed mergem do mastera deweloperzy spotykają się i omawiają propozycje zmian
 - Wykorzystujemy metodologie Agile i spotykamy sie w sprinatch co wtorek o 20
-- Jesli zajdzie potrzeba spotykamy się częsciej komunikując sie na Skype (grupa OpenPKWJava ) bądz przez liste mailingową ( openpkw-java@openpkw.pl ) 
+- Jeśli zajdzie potrzeba spotykamy się częsciej komunikując sie na Skype (grupa OpenPKWJava ) bądź przez listę mailingową ( openpkw-java@openpkw.pl ) 
 
 
 | Element  | Link  |
@@ -68,14 +68,14 @@ GitHub: https://github.com/openpkw/openpkw/tree/master/java
 # Wizja Systemu
 **Opis:**
 
-1.  Za pomocą aplikacji mobilnej użytkownicy (mężowie zaufania), przesyłają dane z protokółow wyborczych z obwodowych komisji przy pomocy QR kodu 
-2. Opcjonalnie dane te zostaną przekaze w jeden w nastepujących sposobów przez PKW
+1.  Za pomocą aplikacji mobilnej użytkownicy (mężowie zaufania), przesyłają dane z protokółow wyborczych z obwodowych komisji przy pomocy kodu QR
+2. Opcjonalnie dane te zostaną przekazane na jeden z nastepujących sposobów przez PKW
 - REST 
 - FTP
 - WWW
 - MAIL 
 3.  Dane z obwodowej komisji i protokołu wraz ze zdjecięm przesyłane są do BackEndowego systemu
-4.  System odbiera dane i zapisuje niezbędne informacje wraz ze zdjeciami zapisanym w oddzielnym katalogu i linkami do zdjęc w samym SQL
+4.  System odbiera dane i zapisuje niezbędne informacje wraz ze zdjeciami zapisanym w oddzielnym katalogu i linkami do zdjęć w samym SQL
 5.  System umożliwia przetwarzanie tych danych a także ich weryfikacje
 6.  System udostępnia zweryfikowane dane za pomocą strony www i wykresów, wyspecyfikowanym grupom użytkowników (docelowo wszystkim wyborcom) potwierdzając wyniki wyborów
 
@@ -94,7 +94,7 @@ GitHub: https://github.com/openpkw/openpkw/tree/master/java
  **Perspektywa Użytkownika / Dzień Wyborczy** (Aplikacje Mobilne)
 
 1. Użytkownik uwierzytelnia się w aplikacji mobilnej za pomocą uprzednio otrzymanego loginu i hasła od Administratora
-2. Po poprawnym uwierzytelnieniu się system rozpoznaje użytkownika i przypisuje automatycznie wczesniej  numer obwodowej komisji z której przekazuje dane za pomoca QR
+2. Po poprawnym uwierzytelnieniu się system rozpoznaje użytkownika i przypisuje automatycznie wcześniej  numer obwodowej komisji z której przekazuje dane za pomocą QR
 3. Użytkownik przesyła dane automatycznie robiąc zdjecie kodu QR a także samych stron protokoły wyborczego. Przekazuje następujące dane:   
  * Ilość uprawnionych do głosowania
  * Ilość wydanych kart do głosowania
@@ -116,9 +116,9 @@ GitHub: https://github.com/openpkw/openpkw/tree/master/java
 
 
 ## Risk & Issue Logs
-1. Wysyłanie protokołów i zakonczenie liczenia głosów w 25000 komisjach zazwyczaj konczy się o tej samej porze +/- 15 min w przypadku prostych wyborów jakimi są Wybory Prezydenckie.Potrzebna Analiza wydajnosciowa serwerów  w tym (SQL, Moc Obliczeniowa maszyny oraz sama przepustowość łącza i-net). Zastanowić się nad modułem synchronizacji otrzymywania wyników.
+1. Wysyłanie protokołów i zakończenie liczenia głosów w 25000 komisjach zazwyczaj konczy się o tej samej porze +/- 15 min w przypadku prostych wyborów jakimi są Wybory Prezydenckie. Potrzebna Analiza wydajnosciowa serwerów  w tym (SQL, Moc Obliczeniowa maszyny oraz sama przepustowość łącza i-net). Zastanowić się nad modułem synchronizacji otrzymywania wyników.
 
-2.  W przypadku gdy usługa będzie cieszyć sie bardzo dużą popularnoscią, Goście (wyborcy), którzy będą chcieli sprawdzić niezależne wyniki wyborów na stronie www - mogą spowodować problemy wydajnosciowe i/lub zawieszenie sie serwerów. Do rozważenia wprowadzenie modułu logowania na gości i ograniczenie ilości połaczeń dla danego gościa.   
+2.  W przypadku gdy usługa będzie cieszyć sie bardzo dużą popularnoscią, Goście (wyborcy), którzy będą chcieli sprawdzić niezależne wyniki wyborów na stronie www - mogą spowodować problemy wydajnosciowe i/lub zawieszenie się serwerów. Do rozważenia wprowadzenie modułu logowania na gości i ograniczenie ilości połaczeń dla danego gościa.   
 
 
 
